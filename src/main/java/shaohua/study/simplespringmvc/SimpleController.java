@@ -1,5 +1,6 @@
 package shaohua.study.simplespringmvc;
 
+import shaohua.study.simplespringframework.annotation.Autowired;
 import shaohua.study.simplespringframework.annotation.Controller;
 import shaohua.study.simplespringmvc.annotation.RequestMapping;
 
@@ -12,8 +13,10 @@ import shaohua.study.simplespringmvc.annotation.RequestMapping;
 @Controller
 @RequestMapping("/springmvc/simple")
 public class SimpleController {
+    @Autowired
+    private SimpleService simpleService;
     @RequestMapping("/hello")
-    public String hello(){
-        return "HElllll0";
+    public String hello(Person person){
+        return person.getUserName() +" say: " + simpleService.sayHello();
     }
 }

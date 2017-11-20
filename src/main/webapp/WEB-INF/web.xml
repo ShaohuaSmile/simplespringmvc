@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>spring-dispatcher-study</servlet-name>
-        <servlet-class>shaohua.study.simplespringmvc.servlet.DespatchServlet</servlet-class>
+        <servlet-class>shaohua.study.simplespringmvc.servlet.DispatchServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
